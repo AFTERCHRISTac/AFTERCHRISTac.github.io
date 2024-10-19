@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AFTER CHRIST - Competitive Team</title>
     <style>
-        @import url('"C:\Users\mason\Downloads\daydream_3\Daydream.ttf"');
+        @import url('https://fonts.googleapis.com/css2?family=Daydream:wght@400&display=swap');
 
         body {
             font-family: 'Daydream', cursive;
-            background-image: url('C:/Users/mason/Downloads/family.png');
-            background-size: cover; /* Makes the background image cover the entire area */
-            background-position: center; /* Centers the background image */
-            color: #fff; /* Change text color to white for better contrast */
+            background-image: url('https://images.unsplash.com/photo-1518603052140-7d0f9539d8c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGdyYWRpZW50fGVufDB8fHx8MTY5MjI2MTU0Mw&ixlib=rb-4.0.3&q=80&w=1080');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: rgba(51, 51, 51, 0.7); /* Semi-transparent background */
+            background-color: rgba(0, 0, 0, 0.7);
             color: #fff;
             padding: 20px;
             text-align: center;
@@ -42,9 +42,9 @@
         section {
             padding: 40px;
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
             margin: 20px;
-            border-radius: 10px; /* Rounded corners */
         }
 
         section img {
@@ -52,6 +52,7 @@
             height: auto;
             border-radius: 50%;
             margin-top: 20px;
+            border: 4px solid #fff;
         }
 
         section p {
@@ -68,17 +69,18 @@
         }
 
         .member, .achievement {
-            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+            background: rgba(255, 255, 255, 0.9);
             border: 1px solid #ddd;
             border-radius: 10px;
             padding: 20px;
             margin: 10px;
             width: 250px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            color: #333;
         }
 
         footer {
-            background-color: rgba(51, 51, 51, 0.7); /* Semi-transparent background */
+            background-color: rgba(0, 0, 0, 0.7);
             color: #fff;
             text-align: center;
             padding: 20px 0;
@@ -176,8 +178,7 @@
     <section id="contact">
         <h2>Contact Us</h2>
         <form id="contactForm" onsubmit="sendMessage(event)">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="text" id="name" placeholder="Your Discord Username" required>
             <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
@@ -198,13 +199,12 @@
             event.preventDefault(); // Prevent the form from submitting normally
 
             const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
 
             const webhookURL = 'https://discord.com/api/webhooks/1297315112167931937/t7-Lwto-L2ONP_dwdHZ-yyVyrE9_-0PB5RJkT4xOyc9itlgWUYNAhNLbl23MrgXfpYia';
 
             const payload = {
-                content: `New message from ${name} (${email}): ${message}`
+                content: `New message from ${name}: ${message}`
             };
 
             fetch(webhookURL, {
