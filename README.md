@@ -45,14 +45,6 @@
             margin: 20px;
         }
 
-        section img {
-            width: 300px;
-            height: auto;
-            border-radius: 50%;
-            margin-top: 20px;
-            border: 4px solid #fff;
-        }
-
         section p {
             font-size: 1.5rem;
             margin-top: 20px;
@@ -142,7 +134,6 @@
     </header>
 
     <section id="about">
-        <img src="C:\Users\mason\Downloads\family.png" alt="AFTER CHRIST Team Image">
         <p>Welcome to the official page of AFTER CHRIST (AC), a high-profile competitive team. We strive for excellence and have a passion for pushing the boundaries of competitive Gorilla Tag. Join us as we aim for the top!</p>
     </section>
 
