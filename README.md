@@ -9,12 +9,13 @@
 
         body {
             font-family: 'Daydream', cursive;
-            background-image: url('https://images.unsplash.com/photo-1518603052140-7d0f9539d8c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGdyYWRpZW50fGVufDB8fHx8MTY5MjI2MTU0Mw&ixlib=rb-4.0.3&q=80&w=1080');
+            background-image: url('https://cdn.discordapp.com/attachments/1294773204744802334/1294773592537432085/family.png');
             background-size: cover;
             background-position: center;
             color: #fff;
             margin: 0;
             padding: 0;
+            overflow: hidden;
         }
 
         header {
