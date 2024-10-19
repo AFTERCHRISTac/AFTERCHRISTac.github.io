@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -55,6 +55,24 @@
             line-height: 1.6;
         }
 
+        .team-members, .achievements {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .member, .achievement {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            width: 250px;
+            color: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
         footer {
             background-color: rgba(0, 0, 0, 0.7);
             color: #fff;
@@ -75,7 +93,7 @@
             background-color: rgba(255, 255, 255, 0.1);
         }
 
-        form input, form select {
+        form input, form textarea, form select {
             width: 90%;
             max-width: 300px;
             padding: 10px;
@@ -88,7 +106,7 @@
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        form input:hover, form select:hover {
+        form input:hover, form textarea:hover, form select:hover {
             transform: scale(1.05);
             box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
         }
@@ -119,6 +137,50 @@
             color: #fff;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
         }
+
+        /* Create Account Section Styles */
+        #createAccount {
+            margin-top: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        #createAccount input {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            width: 100%;
+            max-width: 300px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        #createAccount input:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
+        }
+
+        #createAccount button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            max-width: 300px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+        }
+
+        #createAccount button:hover {
+            background-color: #555;
+        }
     </style>
 </head>
 <body>
@@ -135,16 +197,6 @@
 
     <section id="about">
         <p>Welcome to the official page of AFTER CHRIST (AC), a high-profile competitive team. We strive for excellence and have a passion for pushing the boundaries of competitive Gorilla Tag. Join us as we aim for the top!</p>
-    </section>
-
-    <section id="create-account">
-        <h2>Create an Account</h2>
-        <form id="accountForm" onsubmit="createAccount(event)">
-            <input type="text" id="username" placeholder="Choose a Username" required>
-            <input type="password" id="password" placeholder="Enter a Password" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <button type="submit">Create Account</button>
-        </form>
     </section>
 
     <section id="team">
@@ -187,41 +239,3 @@
         <form id="contactForm" onsubmit="sendMessage(event)">
             <input type="text" id="name" placeholder="Your Discord Username" required>
             <select id="role" required>
-                <option value="" disabled selected>Select Your Role</option>
-                <option value="Team Player">Team Player</option>
-                <option value="Official Player">Official Player</option>
-                <option value="Scout">Scout</option>
-            </select>
-            <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-        <div class="social-media">
-            <h3>Follow Us</h3>
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 AFTER CHRIST Competitive Team. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        function sendMessage(event) {
-            event.preventDefault(); // Prevent the form from submitting normally
-
-            const name = document.getElementById('name').value;
-            const role = document.getElementById('role').value;
-            const message = document.getElementById('message').value;
-
-            const webhookURL = 'https://discord.com/api/webhooks/1297315112167931937/t7-Lwto-L2ONP_dwdHZ-yyVyrE9_-0PB5RJkT4xOyc9itlgWUYNAhNLbl23MrgXfpYia';
-
-            const payload = {
-                content: `New message from ${name} (Role: ${role}): ${message}`
-            };
-
-            fetch(webhookURL, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': '
