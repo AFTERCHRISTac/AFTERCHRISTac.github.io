@@ -9,14 +9,16 @@
 
         body {
             font-family: 'Daydream', cursive;
-            background-color: #f0f0f0;
-            color: #333;
+            background-image: url('C:/Users/mason/Downloads/family.png');
+            background-size: cover; /* Makes the background image cover the entire area */
+            background-position: center; /* Centers the background image */
+            color: #fff; /* Change text color to white for better contrast */
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: #333;
+            background-color: rgba(51, 51, 51, 0.7); /* Semi-transparent background */
             color: #fff;
             padding: 20px;
             text-align: center;
@@ -40,6 +42,9 @@
         section {
             padding: 40px;
             text-align: center;
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+            margin: 20px;
+            border-radius: 10px; /* Rounded corners */
         }
 
         section img {
@@ -63,7 +68,7 @@
         }
 
         .member, .achievement {
-            background: #fff;
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
             border: 1px solid #ddd;
             border-radius: 10px;
             padding: 20px;
@@ -73,7 +78,7 @@
         }
 
         footer {
-            background-color: #333;
+            background-color: rgba(51, 51, 51, 0.7); /* Semi-transparent background */
             color: #fff;
             text-align: center;
             padding: 20px 0;
@@ -112,7 +117,7 @@
         .social-media a {
             margin: 0 10px;
             text-decoration: none;
-            color: #333;
+            color: #fff;
         }
     </style>
 </head>
@@ -129,7 +134,7 @@
     </header>
 
     <section id="about">
-        <img src="C:\Users\mason\Downloads\family.png" alt="AFTER CHRIST Team Image">
+        <img src="C:/Users/mason/Downloads/family.png" alt="AFTER CHRIST Team Image">
         <p>Welcome to the official page of AFTER CHRIST (AC), a high-profile competitive team. We strive for excellence and have a passion for pushing the boundaries of competitive Gorilla Tag. Join us as we aim for the top!</p>
     </section>
 
