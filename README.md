@@ -138,48 +138,35 @@
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
         }
 
-        /* Create Account Section Styles */
-        #createAccount {
-            margin-top: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        .account-section {
+            margin-top: 50px;
+            text-align: center;
         }
 
-        #createAccount input {
-            margin: 10px 0;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background: rgba(255, 255, 255, 0.2);
-            color: #fff;
-            width: 100%;
-            max-width: 300px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        .account-section h2 {
+            margin-bottom: 20px;
         }
 
-        #createAccount input:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
-        }
-
-        #createAccount button {
-            padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-            max-width: 300px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        .hidden-options {
+            display: none;
             margin-top: 20px;
+            text-align: center;
         }
 
-        #createAccount button:hover {
-            background-color: #555;
+        .logged-in-options {
+            display: none;
+        }
+
+        .logged-in-options.active {
+            display: block;
+        }
+
+        .hidden-options p {
+            margin: 10px 0;
+        }
+
+        .hidden-options button {
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -239,3 +226,29 @@
         <form id="contactForm" onsubmit="sendMessage(event)">
             <input type="text" id="name" placeholder="Your Discord Username" required>
             <select id="role" required>
+                <option value="" disabled selected>Select Your Role</option>
+                <option value="Team Player">Team Player</option>
+                <option value="Official Player">Official Player</option>
+                <option value="Scout">Scout</option>
+            </select>
+            <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="social-media">
+            <h3>Follow Us</h3>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </section>
+
+    <section class="account-section">
+        <h2>Create an Account or Login</h2>
+        <button onclick="login()">Login</button>
+        <button onclick="signup()">Sign Up</button>
+        <div class="hidden-options">
+            <p>More options are available when you're logged in!</p>
+        </div>
+        <div class="logged-in-options" id="loggedInOptions">
+            <h3>Welcome back!</h3>
+            <p>You now have access to team management options
