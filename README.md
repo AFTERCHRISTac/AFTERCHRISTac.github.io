@@ -1,69 +1,62 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Official website of our Gorilla Tag Competitive Team. Stay updated on news, events, and achievements!">
-    <title>Gorilla Tag Competitive Team</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="AFTER CHRIST (AC) Competitive Team">
+    <title>AFTER CHRIST - Competitive Team</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #282c34;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+        footer {
+            margin-top: 50px;
+            padding: 10px;
+            background-color: #282c34;
+            color: white;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+
     <header>
-        <div class="logo">
-            <img src="logo.png" alt="Team Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#schedule">Schedule</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>AFTER CHRIST (AC)</h1>
+        <p>Welcome to the official page of the AFTER CHRIST Competitive Team</p>
     </header>
 
-    <section id="hero">
-        <h1>Welcome to Our Gorilla Tag Comp Team!</h1>
-        <p>Your go-to source for all things related to our team, events, and competitions.</p>
-    </section>
+    <section>
+        <h2>About Our Team</h2>
+        <p>AFTER CHRIST (AC) is a dedicated team focused on excellence and teamwork in Gorilla Tag competitions. Join us on our journey!</p>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We are a dedicated Gorilla Tag competitive team with a passion for fast-paced, strategic gameplay. Our team works hard to train and participate in tournaments. We're here to win and have fun!</p>
-    </section>
-
-    <section id="team">
-        <h2>Meet the Team</h2>
-        <div class="team-member">
-            <img src="player1.png" alt="Player 1">
-            <h3>Player 1</h3>
-            <p>Position: Captain</p>
-        </div>
-        <div class="team-member">
-            <img src="player2.png" alt="Player 2">
-            <h3>Player 2</h3>
-            <p>Position: Runner</p>
-        </div>
-        <!-- Add more team members as needed -->
-    </section>
-
-    <section id="schedule">
-        <h2>Upcoming Matches</h2>
-        <ul>
-            <li>October 20, 2024 - Match vs Team Alpha</li>
-            <li>October 27, 2024 - Match vs Team Bravo</li>
-            <li>November 5, 2024 - Tournament</li>
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:team@gorillatagcomp.com">team@gorillatagcomp.com</a></p>
-        <p>Follow us on <a href="#">Instagram</a> | <a href="#">Twitter</a></p>
+        <h3>Meet the Team</h3>
+        <img src="images/family.png" alt="AFTER CHRIST Team Image">
     </section>
 
     <footer>
-        <p>&copy; 2024 Gorilla Tag Competitive Team. All Rights Reserved.</p>
+        <p>&copy; 2024 AFTER CHRIST. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
