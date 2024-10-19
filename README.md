@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,13 +20,13 @@
             color: #fff;
             padding: 20px;
             text-align: center;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Soft shadow for header */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         header h1 {
             margin: 0;
             font-size: 3rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Soft shadow for text */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
         nav {
@@ -37,7 +37,7 @@
             color: #fff;
             margin: 0 15px;
             text-decoration: none;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Soft shadow for navigation links */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
         }
 
         section {
@@ -46,7 +46,7 @@
             background-color: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
             margin: 20px;
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5); /* Soft shadow for sections */
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
         }
 
         section p {
@@ -70,7 +70,7 @@
             margin: 10px;
             width: 250px;
             color: #fff;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Soft shadow for team members and achievements */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         footer {
@@ -79,7 +79,7 @@
             text-align: center;
             padding: 20px 0;
             margin-top: 40px;
-            box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.5); /* Soft shadow for footer */
+            box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.5);
         }
 
         form {
@@ -87,7 +87,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Soft shadow for form */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
             padding: 20px;
             border-radius: 10px;
             background-color: rgba(255, 255, 255, 0.1);
@@ -102,7 +102,13 @@
             border-radius: 5px;
             background: rgba(255, 255, 255, 0.2);
             color: #fff;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Soft shadow for form fields */
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transition for hover effect */
+        }
+
+        form input:hover, form textarea:hover, form select:hover {
+            transform: scale(1.05); /* Slight pop-out effect */
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7); /* Deeper shadow on hover */
         }
 
         form button {
@@ -114,7 +120,7 @@
             cursor: pointer;
             width: 90%;
             max-width: 300px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Soft shadow for button */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         form button:hover {
@@ -129,7 +135,7 @@
             margin: 0 10px;
             text-decoration: none;
             color: #fff;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Soft shadow for social media links */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
         }
     </style>
 </head>
@@ -226,11 +232,4 @@
             fetch(webhookURL, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(payload)
-            })
-            .then(response => {
-                if (response.ok) {
-                    alert('Message sent successfully!');
-                    document.getElement
+                   
