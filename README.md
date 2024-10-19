@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AFTER CHRIST - Competitive Team</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Daydream:wght@400&display=swap');
+        @import url('"C:\Users\mason\Downloads\daydream_3\Daydream.ttf"');
 
         body {
             font-family: 'Daydream', cursive;
@@ -134,7 +134,7 @@
     </header>
 
     <section id="about">
-        <img src="C:/Users/mason/Downloads/family.png" alt="AFTER CHRIST Team Image">
+        <img src="C:\Users\mason\Downloads\family.png" alt="AFTER CHRIST Team Image">
         <p>Welcome to the official page of AFTER CHRIST (AC), a high-profile competitive team. We strive for excellence and have a passion for pushing the boundaries of competitive Gorilla Tag. Join us as we aim for the top!</p>
     </section>
 
