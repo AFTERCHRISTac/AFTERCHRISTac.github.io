@@ -144,7 +144,7 @@
     </header>
 
     <section id="about">
-        <img src="C:\Users\mason\Downloads\family.png" alt="AFTER CHRIST Team Image">
+        <img src="https://cdn.discordapp.com/attachments/1294773204744802334/1294773592537432085/family.png" alt="AFTER CHRIST Team Image">
         <p>Welcome to the official page of AFTER CHRIST (AC), a high-profile competitive team. We strive for excellence and have a passion for pushing the boundaries of competitive Gorilla Tag. Join us as we aim for the top!</p>
     </section>
 
