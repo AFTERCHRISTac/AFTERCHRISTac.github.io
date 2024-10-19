@@ -40,7 +40,7 @@
         section {
             padding: 40px;
             text-align: center;
-            background: linear-gradient(to bottom, red, lightcoral);
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(255, 99, 71, 0.6));
             border-radius: 10px;
             margin: 20px;
         }
@@ -59,7 +59,7 @@
         }
 
         .member, .achievement {
-            background: rgba(255, 255, 255, 0.1);
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(255, 99, 71, 0.6));
             border: 1px solid #ddd;
             border-radius: 10px;
             padding: 20px;
