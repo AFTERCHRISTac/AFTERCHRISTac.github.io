@@ -3,73 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AFTER CHRIST (AC) - Competitive Team</title>
-    
-    <!-- Google Font: Daydream -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Daydream:wght@400&display=swap">
-    
+    <title>AFTER CHRIST - Competitive Team</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Daydream:wght@400&display=swap');
+
         body {
             font-family: 'Daydream', cursive;
-            background-color: #f0f0f5;
+            background-color: #f0f0f0;
+            color: #333;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
         }
 
         header {
-            text-align: center;
+            background-color: #333;
+            color: #fff;
             padding: 20px;
+            text-align: center;
         }
 
-        h1 {
-            font-size: 3rem;
+        header h1 {
             margin: 0;
-            color: #333;
+            font-size: 3rem;
         }
 
-        .team-image img {
+        section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        section img {
             width: 300px;
             height: auto;
-            border-radius: 10px;
-            margin: 20px 0;
+            border-radius: 50%;
+            margin-top: 20px;
         }
 
-        .team-info {
-            max-width: 800px;
-            text-align: center;
-            font-size: 1.2rem;
-            color: #555;
+        section p {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            line-height: 1.6;
         }
 
         footer {
-            margin-top: 20px;
-            font-size: 1rem;
-            color: #999;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
         }
     </style>
 </head>
 <body>
-
     <header>
-        <h1>AFTER CHRIST (AC)</h1>
+        <h1>AFTER CHRIST</h1>
+        <p>(AC) - A High Pro Gorilla Tag Competitive Team</p>
     </header>
 
-    <div class="team-image">
-        <img src="C:/Users/mason/Downloads/family.png" alt="AFTER CHRIST Team">
-    </div>
-
-    <div class="team-info">
-        <p>Welcome to AFTER CHRIST (AC), a high-level professional Gorilla Tag competitive team. We strive for excellence, teamwork, and success in every competition we enter. Join us as we continue to make history in the Gorilla Tag community.</p>
-    </div>
+    <section>
+        <img src="C:\Users\mason\Downloads\family.png" alt="AFTER CHRIST Team Image">
+        <p>Welcome to the official page of AFTER CHRIST (AC), a high-profile competitive team. We strive for excellence and have a passion for pushing the boundaries of competitive Gorilla Tag. Join us as we aim for the top!</p>
+    </section>
 
     <footer>
-        <p>&copy; 2024 AFTER CHRIST (AC) Competitive Team</p>
+        <p>&copy; 2024 AFTER CHRIST Competitive Team. All Rights Reserved.</p>
     </footer>
-
 </body>
 </html>
