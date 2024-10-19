@@ -27,6 +27,16 @@
             font-size: 3rem;
         }
 
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
         section {
             padding: 40px;
             text-align: center;
@@ -45,12 +55,64 @@
             line-height: 1.6;
         }
 
+        .team-members, .achievements {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .member, .achievement {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            width: 250px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
         footer {
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 10px 0;
+            padding: 20px 0;
             margin-top: 40px;
+        }
+
+        form {
+            margin-top: 30px;
+        }
+
+        form input, form textarea {
+            width: 300px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+
+        .social-media {
+            margin-top: 20px;
+        }
+
+        .social-media a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
         }
     </style>
 </head>
@@ -58,11 +120,77 @@
     <header>
         <h1>AFTER CHRIST</h1>
         <p>(AC) - A High Pro Gorilla Tag Competitive Team</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#team">Team Members</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <section>
+    <section id="about">
         <img src="C:\Users\mason\Downloads\family.png" alt="AFTER CHRIST Team Image">
         <p>Welcome to the official page of AFTER CHRIST (AC), a high-profile competitive team. We strive for excellence and have a passion for pushing the boundaries of competitive Gorilla Tag. Join us as we aim for the top!</p>
+    </section>
+
+    <section id="team">
+        <h2>Meet the Team</h2>
+        <div class="team-members">
+            <div class="member">
+                <h3>Member 1</h3>
+                <p>Role: Captain</p>
+                <p>Bio: A dedicated player with a love for strategy and teamwork.</p>
+            </div>
+            <div class="member">
+                <h3>Member 2</h3>
+                <p>Role: Sniper</p>
+                <p>Bio: Known for precise shots and quick reflexes.</p>
+            </div>
+            <div class="member">
+                <h3>Member 3</h3>
+                <p>Role: Support</p>
+                <p>Bio: Always there to assist teammates and strategize.</p>
+            </div>
+            <div class="member">
+                <h3>Member 4</h3>
+                <p>Role: Scout</p>
+                <p>Bio: Fast and agile, perfect for gathering information.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements">
+        <h2>Our Achievements</h2>
+        <div class="achievements">
+            <div class="achievement">
+                <h3>Championship 2023</h3>
+                <p>Won first place in the Gorilla Tag Championship!</p>
+            </div>
+            <div class="achievement">
+                <h3>Community Recognition</h3>
+                <p>Acknowledged for our sportsmanship and teamwork.</p>
+            </div>
+            <div class="achievement">
+                <h3>Top Ranked Team</h3>
+                <p>Ranked among the top teams in the Gorilla Tag community.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="social-media">
+            <h3>Follow Us</h3>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
     </section>
 
     <footer>
