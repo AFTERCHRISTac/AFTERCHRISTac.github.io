@@ -40,7 +40,7 @@
         section {
             padding: 40px;
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.7);
+            background: linear-gradient(to bottom, red, lightcoral);
             border-radius: 10px;
             margin: 20px;
         }
