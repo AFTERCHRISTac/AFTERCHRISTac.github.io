@@ -38,6 +38,7 @@
             margin: 0 15px;
             text-decoration: none;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+            cursor: pointer;
         }
 
         section {
@@ -103,12 +104,12 @@
             background: rgba(255, 255, 255, 0.2);
             color: #fff;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-            transition: transform 0.2s ease, box-shadow 0.2s ease; /* Transition for hover effect */
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         form input:hover, form textarea:hover, form select:hover {
-            transform: scale(1.05); /* Slight pop-out effect */
-            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7); /* Deeper shadow on hover */
+            transform: scale(1.05);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
         }
 
         form button {
@@ -205,9 +206,9 @@
         </form>
         <div class="social-media">
             <h3>Follow Us</h3>
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
+            <a href="https://facebook.com" target="_blank">Facebook</a> <!-- External link -->
+            <a href="https://twitter.com" target="_blank">Twitter</a> <!-- External link -->
+            <a href="#team">Meet the Team</a> <!-- Internal link -->
         </div>
     </section>
 
@@ -223,13 +224,4 @@
             const role = document.getElementById('role').value;
             const message = document.getElementById('message').value;
 
-            const webhookURL = 'https://discord.com/api/webhooks/1297315112167931937/t7-Lwto-L2ONP_dwdHZ-yyVyrE9_-0PB5RJkT4xOyc9itlgWUYNAhNLbl23MrgXfpYia';
-
-            const payload = {
-                content: `New message from ${name} (Role: ${role}): ${message}`
-            };
-
-            fetch(webhookURL, {
-                method: 'POST',
-                headers: {
-                   
+            const webhookURL = 'https://discord.com/api/webhooks/1297315112167931937/t7-Lwto-L2ONP_dwdHZ-yyVyrE9_-0PB
