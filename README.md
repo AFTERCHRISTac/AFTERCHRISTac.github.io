@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -38,7 +38,6 @@
             margin: 0 15px;
             text-decoration: none;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-            cursor: pointer;
         }
 
         section {
@@ -54,24 +53,6 @@
             font-size: 1.5rem;
             margin-top: 20px;
             line-height: 1.6;
-        }
-
-        .team-members, .achievements {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 40px;
-        }
-
-        .member, .achievement {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 10px;
-            width: 250px;
-            color: #fff;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         footer {
@@ -94,7 +75,7 @@
             background-color: rgba(255, 255, 255, 0.1);
         }
 
-        form input, form textarea, form select {
+        form input, form select {
             width: 90%;
             max-width: 300px;
             padding: 10px;
@@ -107,7 +88,7 @@
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        form input:hover, form textarea:hover, form select:hover {
+        form input:hover, form select:hover {
             transform: scale(1.05);
             box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
         }
@@ -154,6 +135,16 @@
 
     <section id="about">
         <p>Welcome to the official page of AFTER CHRIST (AC), a high-profile competitive team. We strive for excellence and have a passion for pushing the boundaries of competitive Gorilla Tag. Join us as we aim for the top!</p>
+    </section>
+
+    <section id="create-account">
+        <h2>Create an Account</h2>
+        <form id="accountForm" onsubmit="createAccount(event)">
+            <input type="text" id="username" placeholder="Choose a Username" required>
+            <input type="password" id="password" placeholder="Enter a Password" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <button type="submit">Create Account</button>
+        </form>
     </section>
 
     <section id="team">
@@ -206,9 +197,9 @@
         </form>
         <div class="social-media">
             <h3>Follow Us</h3>
-            <a href="https://facebook.com" target="_blank">Facebook</a> <!-- External link -->
-            <a href="https://twitter.com" target="_blank">Twitter</a> <!-- External link -->
-            <a href="#team">Meet the Team</a> <!-- Internal link -->
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
         </div>
     </section>
 
@@ -224,4 +215,13 @@
             const role = document.getElementById('role').value;
             const message = document.getElementById('message').value;
 
-            const webhookURL = 'https://discord.com/api/webhooks/1297315112167931937/t7-Lwto-L2ONP_dwdHZ-yyVyrE9_-0PB
+            const webhookURL = 'https://discord.com/api/webhooks/1297315112167931937/t7-Lwto-L2ONP_dwdHZ-yyVyrE9_-0PB5RJkT4xOyc9itlgWUYNAhNLbl23MrgXfpYia';
+
+            const payload = {
+                content: `New message from ${name} (Role: ${role}): ${message}`
+            };
+
+            fetch(webhookURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': '
