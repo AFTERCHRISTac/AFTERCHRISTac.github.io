@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,11 +20,13 @@
             color: #fff;
             padding: 20px;
             text-align: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Soft shadow for header */
         }
 
         header h1 {
             margin: 0;
             font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Soft shadow for text */
         }
 
         nav {
@@ -35,14 +37,16 @@
             color: #fff;
             margin: 0 15px;
             text-decoration: none;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Soft shadow for navigation links */
         }
 
         section {
             padding: 40px;
             text-align: center;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(255, 99, 71, 0.6));
+            background-color: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
             margin: 20px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5); /* Soft shadow for sections */
         }
 
         section p {
@@ -59,14 +63,14 @@
         }
 
         .member, .achievement {
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(255, 99, 71, 0.6));
+            background: rgba(255, 255, 255, 0.1);
             border: 1px solid #ddd;
             border-radius: 10px;
             padding: 20px;
             margin: 10px;
             width: 250px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
             color: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Soft shadow for team members and achievements */
         }
 
         footer {
@@ -75,6 +79,7 @@
             text-align: center;
             padding: 20px 0;
             margin-top: 40px;
+            box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.5); /* Soft shadow for footer */
         }
 
         form {
@@ -82,6 +87,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Soft shadow for form */
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
         }
 
         form input, form textarea, form select {
@@ -93,6 +102,7 @@
             border-radius: 5px;
             background: rgba(255, 255, 255, 0.2);
             color: #fff;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Soft shadow for form fields */
         }
 
         form button {
@@ -104,6 +114,7 @@
             cursor: pointer;
             width: 90%;
             max-width: 300px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Soft shadow for button */
         }
 
         form button:hover {
@@ -118,6 +129,7 @@
             margin: 0 10px;
             text-decoration: none;
             color: #fff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Soft shadow for social media links */
         }
     </style>
 </head>
@@ -221,16 +233,4 @@
             .then(response => {
                 if (response.ok) {
                     alert('Message sent successfully!');
-                    document.getElementById('contactForm').reset(); // Reset the form
-                } else {
-                    alert('Error sending message. Please try again later.');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Error sending message. Please try again later.');
-            });
-        }
-    </script>
-</body>
-</html>
+                    document.getElement
