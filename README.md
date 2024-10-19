@@ -163,16 +163,7 @@
         <h2>Our Achievements</h2>
         <div class="achievements">
             <div class="achievement">
-                <h3>Championship 2023</h3>
-                <p>Won first place in the Gorilla Tag Championship!</p>
-            </div>
-            <div class="achievement">
-                <h3>Community Recognition</h3>
-                <p>Acknowledged for our sportsmanship and teamwork.</p>
-            </div>
-            <div class="achievement">
-                <h3>Top Ranked Team</h3>
-                <p>Ranked among the top teams in the Gorilla Tag community.</p>
+                <h3><strong>Coming Soon</strong></h3>
             </div>
         </div>
     </section>
