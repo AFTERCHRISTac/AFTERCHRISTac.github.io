@@ -89,14 +89,20 @@
 
         form {
             margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         form input, form textarea, form select {
-            width: 300px;
+            width: 90%;
+            max-width: 300px;
             padding: 10px;
             margin: 10px 0;
             border: 1px solid #ddd;
             border-radius: 5px;
+            background: rgba(255, 255, 255, 0.8);
+            color: #333;
         }
 
         form button {
@@ -106,6 +112,8 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            width: 90%;
+            max-width: 300px;
         }
 
         form button:hover {
