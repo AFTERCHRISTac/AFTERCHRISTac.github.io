@@ -244,11 +244,6 @@
 
     <section class="account-section">
         <h2>Create an Account or Login</h2>
-        <button onclick="login()">Login</button>
-        <button onclick="signup()">Sign Up</button>
-        <div class="hidden-options">
-            <p>More options are available when you're logged in!</p>
-        </div>
-        <div class="logged-in-options" id="loggedInOptions">
-            <h3>Welcome back!</h3>
-            <p>You now have access to team management options
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="
