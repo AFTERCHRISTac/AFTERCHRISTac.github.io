@@ -9,9 +9,7 @@
 
         body {
             font-family: 'Daydream', cursive;
-            background-image: url('https://images.unsplash.com/photo-1518603052140-7d0f9539d8c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGdyYWRpZW50fGVufDB8fHx8MTY5MjI2MTU0Mw&ixlib=rb-4.0.3&q=80&w=1080');
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(to bottom, black, gray);
             color: #fff;
             margin: 0;
             padding: 0;
@@ -69,14 +67,14 @@
         }
 
         .member, .achievement {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.1);
             border: 1px solid #ddd;
             border-radius: 10px;
             padding: 20px;
             margin: 10px;
             width: 250px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            color: #333;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            color: #fff;
         }
 
         footer {
@@ -101,8 +99,8 @@
             margin: 10px 0;
             border: 1px solid #ddd;
             border-radius: 5px;
-            background: rgba(255, 255, 255, 0.8);
-            color: #333;
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
         }
 
         form button {
@@ -144,7 +142,7 @@
     </header>
 
     <section id="about">
-        <img src="https://cdn.discordapp.com/attachments/1294773204744802334/1294773592537432085/family.png" alt="AFTER CHRIST Team Image">
+        <img src="C:\Users\mason\Downloads\family.png" alt="AFTER CHRIST Team Image">
         <p>Welcome to the official page of AFTER CHRIST (AC), a high-profile competitive team. We strive for excellence and have a passion for pushing the boundaries of competitive Gorilla Tag. Join us as we aim for the top!</p>
     </section>
 
