@@ -1,41 +1,55 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AFTER CHRIST (AC) Competitive Team">
-    <title>AFTER CHRIST - Competitive Team</title>
+    <title>AFTER CHRIST (AC) - Competitive Team</title>
+    
+    <!-- Google Font: Daydream -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Daydream:wght@400&display=swap">
+    
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Daydream', cursive;
+            background-color: #f0f0f5;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
+
         header {
-            background-color: #282c34;
-            color: white;
-            padding: 20px;
             text-align: center;
+            padding: 20px;
         }
-        header h1 {
-            margin: 0;
+
+        h1 {
             font-size: 3rem;
+            margin: 0;
+            color: #333;
         }
-        section {
-            padding: 20px;
-            text-align: center;
-        }
-        img {
-            max-width: 100%;
+
+        .team-image img {
+            width: 300px;
             height: auto;
-            margin-top: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
         }
-        footer {
-            margin-top: 50px;
-            padding: 10px;
-            background-color: #282c34;
-            color: white;
+
+        .team-info {
+            max-width: 800px;
             text-align: center;
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #999;
         }
     </style>
 </head>
@@ -43,19 +57,18 @@
 
     <header>
         <h1>AFTER CHRIST (AC)</h1>
-        <p>Welcome to the official page of the AFTER CHRIST Competitive Team</p>
     </header>
 
-    <section>
-        <h2>About Our Team</h2>
-        <p>AFTER CHRIST (AC) is a dedicated team focused on excellence and teamwork in Gorilla Tag competitions. Join us on our journey!</p>
+    <div class="team-image">
+        <img src="C:/Users/mason/Downloads/family.png" alt="AFTER CHRIST Team">
+    </div>
 
-        <h3>Meet the Team</h3>
-        <img src="images/family.png" alt="AFTER CHRIST Team Image">
-    </section>
+    <div class="team-info">
+        <p>Welcome to AFTER CHRIST (AC), a high-level professional Gorilla Tag competitive team. We strive for excellence, teamwork, and success in every competition we enter. Join us as we continue to make history in the Gorilla Tag community.</p>
+    </div>
 
     <footer>
-        <p>&copy; 2024 AFTER CHRIST. All rights reserved.</p>
+        <p>&copy; 2024 AFTER CHRIST (AC) Competitive Team</p>
     </footer>
 
 </body>
