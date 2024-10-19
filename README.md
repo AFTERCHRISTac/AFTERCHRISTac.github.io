@@ -144,24 +144,24 @@
         <h2>Meet the Team</h2>
         <div class="team-members">
             <div class="member">
-                <h3>Member 1</h3>
-                <p>Role: Captain</p>
-                <p>Bio: A dedicated player with a love for strategy and teamwork.</p>
+                <h3>CAPTAIN</h3>
+                <p>A person in charge of the team, managing, promoting, and helping new people.</p>
             </div>
             <div class="member">
-                <h3>Member 2</h3>
-                <p>Role: Sniper</p>
-                <p>Bio: Known for precise shots and quick reflexes.</p>
+                <h3>TEAM PLAYER</h3>
+                <p>A player that participates in scrims and team practices.</p>
             </div>
             <div class="member">
-                <h3>Member 3</h3>
-                <p>Role: Support</p>
-                <p>Bio: Always there to assist teammates and strategize.</p>
+                <h3>OFFICIAL PLAYER</h3>
+                <p>Plays in official scrims and in events like GTC, CGT, etc.</p>
             </div>
             <div class="member">
-                <h3>Member 4</h3>
-                <p>Role: Scout</p>
-                <p>Bio: Fast and agile, perfect for gathering information.</p>
+                <h3>SCOUT</h3>
+                <p>A player that helps look for new official players and team players.</p>
+            </div>
+            <div class="member">
+                <h3>CO-CAPTAIN</h3>
+                <p>Helps manage the team and assists the captain.</p>
             </div>
         </div>
     </section>
