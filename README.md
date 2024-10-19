@@ -3,118 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gorilla Tag Comp Teams</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #444;
-        }
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-        nav a:hover {
-            background-color: #555;
-        }
-        .container {
-            padding: 20px;
-        }
-        .team-section, .matches-section, .contact-section {
-            margin-bottom: 40px;
-        }
-        .team-section h2, .matches-section h2, .contact-section h2 {
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-        }
-        .team-members, .matches-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .team-members li, .matches-list li {
-            background-color: white;
-            margin-bottom: 10px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <meta name="description" content="Official website of our Gorilla Tag Competitive Team. Stay updated on news, events, and achievements!">
+    <title>Gorilla Tag Competitive Team</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Team Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<header>
-    <h1>Gorilla Tag Competitive Teams</h1>
-</header>
+    <section id="hero">
+        <h1>Welcome to Our Gorilla Tag Comp Team!</h1>
+        <p>Your go-to source for all things related to our team, events, and competitions.</p>
+    </section>
 
-<nav>
-    <a href="#team">Team</a>
-    <a href="#matches">Matches</a>
-    <a href="#contact">Contact</a>
-</nav>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a dedicated Gorilla Tag competitive team with a passion for fast-paced, strategic gameplay. Our team works hard to train and participate in tournaments. We're here to win and have fun!</p>
+    </section>
 
-<div class="container">
-    <!-- Team Section -->
-    <section id="team" class="team-section">
+    <section id="team">
         <h2>Meet the Team</h2>
-        <ul class="team-members">
-            <li><strong>Player 1</strong> - Team Leader</li>
-            <li><strong>Player 2</strong> - Offensive</li>
-            <li><strong>Player 3</strong> - Defensive</li>
-            <li><strong>Player 4</strong> - Support</li>
-        </ul>
+        <div class="team-member">
+            <img src="player1.png" alt="Player 1">
+            <h3>Player 1</h3>
+            <p>Position: Captain</p>
+        </div>
+        <div class="team-member">
+            <img src="player2.png" alt="Player 2">
+            <h3>Player 2</h3>
+            <p>Position: Runner</p>
+        </div>
+        <!-- Add more team members as needed -->
     </section>
 
-    <!-- Matches Section -->
-    <section id="matches" class="matches-section">
+    <section id="schedule">
         <h2>Upcoming Matches</h2>
-        <ul class="matches-list">
-            <li><strong>Match 1:</strong> Team A vs. Team B - Date: 10/25/2024</li>
-            <li><strong>Match 2:</strong> Team A vs. Team C - Date: 11/01/2024</li>
-            <li><strong>Match 3:</strong> Team A vs. Team D - Date: 11/08/2024</li>
+        <ul>
+            <li>October 20, 2024 - Match vs Team Alpha</li>
+            <li>October 27, 2024 - Match vs Team Bravo</li>
+            <li>November 5, 2024 - Tournament</li>
         </ul>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
+    <section id="contact">
         <h2>Contact Us</h2>
-        <form action="submit_contact_form.php" method="POST">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="5" required></textarea><br><br>
-            <input type="submit" value="Submit">
-        </form>
+        <p>Email: <a href="mailto:team@gorillatagcomp.com">team@gorillatagcomp.com</a></p>
+        <p>Follow us on <a href="#">Instagram</a> | <a href="#">Twitter</a></p>
     </section>
-</div>
 
-<footer>
-    <p>&copy; 2024 Gorilla Tag Comp Teams. All rights reserved.</p>
-</footer>
-
+    <footer>
+        <p>&copy; 2024 Gorilla Tag Competitive Team. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
