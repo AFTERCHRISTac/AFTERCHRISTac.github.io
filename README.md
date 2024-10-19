@@ -91,7 +91,7 @@
             margin-top: 30px;
         }
 
-        form input, form textarea {
+        form input, form textarea, form select {
             width: 300px;
             padding: 10px;
             margin: 10px 0;
@@ -179,6 +179,12 @@
         <h2>Contact Us</h2>
         <form id="contactForm" onsubmit="sendMessage(event)">
             <input type="text" id="name" placeholder="Your Discord Username" required>
+            <select id="role" required>
+                <option value="" disabled selected>Select Your Role</option>
+                <option value="Team Player">Team Player</option>
+                <option value="Official Player">Official Player</option>
+                <option value="Scout">Scout</option>
+            </select>
             <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
@@ -199,12 +205,13 @@
             event.preventDefault(); // Prevent the form from submitting normally
 
             const name = document.getElementById('name').value;
+            const role = document.getElementById('role').value;
             const message = document.getElementById('message').value;
 
             const webhookURL = 'https://discord.com/api/webhooks/1297315112167931937/t7-Lwto-L2ONP_dwdHZ-yyVyrE9_-0PB5RJkT4xOyc9itlgWUYNAhNLbl23MrgXfpYia';
 
             const payload = {
-                content: `New message from ${name}: ${message}`
+                content: `New message from ${name} (Role: ${role}): ${message}`
             };
 
             fetch(webhookURL, {
