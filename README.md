@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -168,13 +168,6 @@
         .hidden-options button {
             margin-top: 10px;
         }
-
-        .form-container {
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
-        }
     </style>
 </head>
 <body>
@@ -251,4 +244,8 @@
 
     <section class="account-section">
         <h2>Create an Account or Login</h2>
-        <button onclick="showLoginForm()">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="signup()">Sign Up</button>
+        <button onclick="login()">Login</button>
+        <
