@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -250,4 +250,114 @@
 
     <section class="account-section">
         <h2>Create an Account or Login</h2>
-        <input type="text" id
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="signup()">Sign Up</button>
+        <button onclick="login()">Login</button>
+
+        <div class="hidden-options" id="hiddenOptions">
+            <div class="welcome-message" id="welcomeMessage"></div>
+            <div class="logged-in-options" id="loggedInOptions">
+                <h3>Welcome, <span id="displayUsername"></span>!</h3>
+                <button onclick="showMoreOptions()">More Options</button>
+                <div id="moreOptions" style="display:none;">
+                    <p>Here are some extra features available to you:</p>
+                    <button>Feature 1</button>
+                    <button>Feature 2</button>
+                    <button>Feature 3</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AFTER CHRIST. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
+        let isLoggedIn = false;
+
+        function signup() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Check if the username already exists
+            if (storedUsers.some(user => user.username === username)) {
+                alert('Username already exists. Please choose another one.');
+                return;
+            }
+
+            // Create a new user and store it
+            storedUsers.push({ username, password });
+            localStorage.setItem('users', JSON.stringify(storedUsers));
+
+            // Clear input fields
+            document.getElementById('username').value = '';
+            document.getElementById('password').value = '';
+
+            // Show hidden options
+            document.getElementById('hiddenOptions').style.display = 'block';
+            document.getElementById('welcomeMessage').innerText = `Account created for ${username}!`;
+        }
+
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Check if the user exists and the password matches
+            const user = storedUsers.find(user => user.username === username && user.password === password);
+
+            if (user) {
+                isLoggedIn = true;
+                document.getElementById('hiddenOptions').style.display = 'block';
+                document.getElementById('displayUsername').innerText = username;
+                document.getElementById('loggedInOptions').classList.add('active');
+                document.getElementById('welcomeMessage').innerText = `Welcome back, ${username}!`;
+                // Clear input fields
+                document.getElementById('username').value = '';
+                document.getElementById('password').value = '';
+            } else {
+                alert('Invalid username or password.');
+            }
+        }
+
+        function showMoreOptions() {
+            const moreOptions = document.getElementById('moreOptions');
+            moreOptions.style.display = moreOptions.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function sendMessage(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const role = document.getElementById('role').value;
+            const message = document.getElementById('message').value;
+
+            const webhookURL = 'https://discord.com/api/webhooks/1297315112167931937/t7-Lwto-L2ONP_dwdHZ-yyVyrE9_-0PB5RJkT4xOyc9itlgWUYNAhNLbl23MrgXfpYia';
+            const payload = {
+                content: `Message from ${name} (${role}): ${message}`
+            };
+
+            fetch(webhookURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Message sent to Discord!');
+                    document.getElementById('contactForm').reset();
+                } else {
+                    alert('Failed to send message.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error sending message.');
+            });
+        }
+    </script>
+</body>
+</html>
