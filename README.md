@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,44 +17,130 @@
             padding: 0;
         }
 
-        header, footer {
+        header {
             background: #111;
             color: #ffffff;
-            text-align: center;
             padding: 20px;
+            text-align: center;
             border-bottom: 2px solid #444;
         }
 
         header h1 {
             font-size: 3.5rem;
+            text-transform: uppercase;
+            margin: 0;
             color: #f05454;
+            letter-spacing: 3px;
         }
 
-        section, .expandable-section {
-            padding: 20px;
+        nav a {
+            color: #f05454;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        section {
+            padding: 40px;
+            text-align: center;
             background: rgba(25, 25, 25, 0.9);
             margin: 20px;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0,0,0,0.7);
-            display: none;
         }
 
-        .button-container {
-            text-align: center;
+        .team-image {
+            width: 80%;
+            height: auto;
+            max-width: 500px;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+
+        .team-description {
+            font-size: 1.4rem;
+            margin-top: 20px;
+            line-height: 1.8;
+            color: #e0e0e0;
+        }
+
+        .team-members, .achievements {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
             margin-top: 40px;
         }
 
-        .expand-button {
+        .member, .achievement {
+            background: rgba(34, 34, 34, 0.8);
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            width: 250px;
+            color: #d4d4d4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            background: #111;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 2px solid #444;
+            position: relative;
+        }
+
+        form input, form textarea {
+            width: 300px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #666;
+            border-radius: 5px;
+            background: #222;
+            color: #f3f3f3;
+        }
+
+        form button {
             padding: 10px 20px;
             background-color: #f05454;
             color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            margin: 10px;
         }
 
-        .expand-button:hover {
+        form button:hover {
+            background-color: #ff7675;
+        }
+
+        .social-media a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #f05454;
+        }
+
+        .more-section, .scrim-schedule-section {
+            display: none;
+            margin-top: 20px;
+            color: #f3f3f3;
+            background: rgba(34, 34, 34, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .more-button, .scrim-schedule-button {
+            padding: 10px 20px;
+            background-color: #f05454;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+
+        .more-button:hover, .scrim-schedule-button:hover {
             background-color: #ff7675;
         }
     </style>
@@ -63,49 +149,135 @@
     <header>
         <h1>Eclipse</h1>
         <p>A Premier Gorilla Tag Competitive Team</p>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#team">Team Members</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
     <section id="about">
-        <p>Welcome to Eclipse, a high-performance team in Gorilla Tag.</p>
+        <img src="background-image-placeholder.png" alt="Eclipse Team Image" class="team-image">
+        <p class="team-description">Welcome to the official page of Eclipse, a high-performance competitive team dedicated to excellence and innovation in the Gorilla Tag arena. Join us as we aim for greatness and set new standards in gameplay!</p>
     </section>
 
-    <!-- Button Container for expandable sections -->
-    <div class="button-container">
-        <button class="expand-button" onclick="toggleSection('mission')">Our Mission</button>
-        <button class="expand-button" onclick="toggleSection('schedule')">Training Schedule</button>
-        <button class="expand-button" onclick="toggleSection('tournaments')">Upcoming Tournaments</button>
-        <button class="expand-button" onclick="toggleSection('coaches')">Contact Coaches</button>
-    </div>
-
-    <!-- Expandable Sections -->
-    <section id="mission" class="expandable-section">
-        <h2>Our Mission</h2>
-        <p>To push the limits of competitive play, representing Eclipse with excellence.</p>
+    <section id="team">
+        <h2>Meet the Team</h2>
+        <div class="team-members">
+            <div class="member">
+                <h3>Official Member</h3>
+                <p>Part of our dedicated competitive roster.</p>
+            </div>
+            <div class="member">
+                <h3>Team Manager</h3>
+                <p>Oversees operations and coordinates team activities.</p>
+            </div>
+            <div class="member">
+                <h3>Scrim Manager</h3>
+                <p>Organizes and manages practice sessions.</p>
+            </div>
+            <div class="member">
+                <h3>Referee</h3>
+                <p>Ensures fair play and upholds team rules.</p>
+            </div>
+            <div class="member">
+                <h3>Caster</h3>
+                <p>Provides engaging commentary during matches.</p>
+            </div>
+        </div>
+        <button class="more-button" onclick="toggleMore()">More</button>
+        <div class="more-section" id="moreContent">
+            <h2>Leagues & Roster</h2>
+            <p><strong>League:</strong> Ultimate COMP Gorilla Tag</p>
+            <h3>Roster</h3>
+            <ul>
+                <li>@errorxm</li>
+                <li>@𝓩𝓮𝓽𝓪✞</li>
+                <li>@AC MNM</li>
+                <li>@Chikune</li>
+                <li>@no name</li>
+                <li>@vision brought pizza for you all</li>
+                <li>@Beats</li>
+                <li>@D1V8IN</li>
+                <li>@Ⓑ</li>
+                <li>@✦CARTIFE!NV4MP✦</li>
+            </ul>
+        </div>
     </section>
 
-    <section id="schedule" class="expandable-section">
-        <h2>Training Schedule</h2>
-        <p>Our team trains every Wednesday and Friday at 6 PM EST.</p>
+    <section id="achievements">
+        <h2>Our Achievements</h2>
+        <div class="achievements">
+            <div class="achievement">
+                <h3><strong>Coming Soon</strong></h3>
+            </div>
+        </div>
     </section>
 
-    <section id="tournaments" class="expandable-section">
-        <h2>Upcoming Tournaments</h2>
-        <p>Catch us in the next Ultimate COMP Gorilla Tag Tournament on November 15th!</p>
-    </section>
-
-    <section id="coaches" class="expandable-section">
-        <h2>Contact Coaches</h2>
-        <p>Reach out to our coaches via email at coaches@eclipse.com or on Discord.</p>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm" onsubmit="sendMessage(event)">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="social-media">
+            <h3>Follow Us</h3>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Eclipse Competitive Team. All Rights Reserved.</p>
+        <button class="scrim-schedule-button" onclick="toggleScrimSchedule()">Scrim Schedules</button>
+        <div class="scrim-schedule-section" id="scrimScheduleContent">
+            <h2>Upcoming Scrim Schedule</h2>
+            <p><strong>Saint vs. Eclipse</strong><br>November 8, 2024 - 7 PM EST</p>
+        </div>
     </footer>
 
     <script>
-        function toggleSection(id) {
-            const section = document.getElementById(id);
-            section.style.display = section.style.display === "none" || section.style.display === "" ? "block" : "none";
+        function toggleMore() {
+            const moreSection = document.getElementById("moreContent");
+            moreSection.style.display = moreSection.style.display === "none" || moreSection.style.display === "" ? "block" : "none";
+        }
+
+        function toggleScrimSchedule() {
+            const scrimScheduleSection = document.getElementById("scrimScheduleContent");
+            scrimScheduleSection.style.display = scrimScheduleSection.style.display === "none" || scrimScheduleSection.style.display === "" ? "block" : "none";
+        }
+
+        function sendMessage(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const message = document.getElementById('message').value;
+            const webhookUrl = "https://discord.com/api/webhooks/1303555595907108884/QZSxuSDug616xvyF2dTHziooRjCSk7twoTFod5-6qKVqGUVQwlmNdbJ_kBzm3Cg-Nok1";
+
+            fetch(webhookUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    content: `Name: ${name}\nMessage: ${message}`
+                })
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Message sent successfully!');
+                    document.getElementById('contactForm').reset();
+                } else {
+                    alert('Error sending message. Please try again later.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error sending message. Please try again later.');
+            });
         }
     </script>
 </body>
