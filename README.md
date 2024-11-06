@@ -3,56 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AFTER CHRIST - Competitive Team</title>
+    <title>Eclipse - Competitive Team</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Daydream:wght@400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400&display=swap');
 
         body {
-            font-family: 'Daydream', cursive;
-            background: linear-gradient(to bottom, black, gray);
-            color: #fff;
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(145deg, #0d0d0d, #222);
+            background-attachment: fixed;
+            background-size: cover;
+            color: #f3f3f3;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: rgba(0, 0, 0, 0.7);
-            color: #fff;
+            background: #111;
+            color: #ffffff;
             padding: 20px;
             text-align: center;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            border-bottom: 2px solid #444;
         }
 
         header h1 {
+            font-size: 3.5rem;
+            text-transform: uppercase;
             margin: 0;
-            font-size: 3rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-
-        nav {
-            margin: 20px 0;
+            color: #f05454;
+            letter-spacing: 3px;
         }
 
         nav a {
-            color: #fff;
+            color: #f05454;
             margin: 0 15px;
             text-decoration: none;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+            font-size: 1.1rem;
         }
 
         section {
             padding: 40px;
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
+            background: rgba(25, 25, 25, 0.9);
             margin: 20px;
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.7);
         }
 
-        section p {
-            font-size: 1.5rem;
+        .team-image {
+            width: 80%;
+            height: auto;
+            max-width: 500px;
+            border-radius: 20px;
             margin-top: 20px;
-            line-height: 1.6;
+        }
+
+        .team-description {
+            font-size: 1.4rem;
+            margin-top: 20px;
+            line-height: 1.8;
+            color: #e0e0e0;
         }
 
         .team-members, .achievements {
@@ -63,123 +72,58 @@
         }
 
         .member, .achievement {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid #ddd;
+            background: rgba(34, 34, 34, 0.8);
+            border: 1px solid #333;
             border-radius: 10px;
             padding: 20px;
             margin: 10px;
             width: 250px;
-            color: #fff;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            color: #d4d4d4;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
         footer {
-            background-color: rgba(0, 0, 0, 0.7);
-            color: #fff;
+            background: #111;
+            color: #ffffff;
             text-align: center;
             padding: 20px 0;
-            margin-top: 40px;
-            box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.5);
+            border-top: 2px solid #444;
         }
 
-        form {
-            margin-top: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 10px;
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        form input, form textarea, form select {
-            width: 90%;
-            max-width: 300px;
+        form input, form textarea {
+            width: 300px;
             padding: 10px;
             margin: 10px 0;
-            border: 1px solid #ddd;
+            border: 1px solid #666;
             border-radius: 5px;
-            background: rgba(255, 255, 255, 0.2);
-            color: #fff;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        form input:hover, form textarea:hover, form select:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
+            background: #222;
+            color: #f3f3f3;
         }
 
         form button {
             padding: 10px 20px;
-            background-color: #333;
+            background-color: #f05454;
             color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            width: 90%;
-            max-width: 300px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         form button:hover {
-            background-color: #555;
-        }
-
-        .social-media {
-            margin-top: 20px;
+            background-color: #ff7675;
         }
 
         .social-media a {
             margin: 0 10px;
             text-decoration: none;
-            color: #fff;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-        }
-
-        .account-section {
-            margin-top: 50px;
-            text-align: center;
-        }
-
-        .account-section h2 {
-            margin-bottom: 20px;
-        }
-
-        .hidden-options {
-            display: none;
-            margin-top: 20px;
-            text-align: center;
-        }
-
-        .logged-in-options {
-            display: none;
-            margin-top: 20px;
-        }
-
-        .logged-in-options.active {
-            display: block;
-        }
-
-        .hidden-options p {
-            margin: 10px 0;
-        }
-
-        .hidden-options button {
-            margin-top: 10px;
-        }
-
-        .welcome-message {
-            margin-top: 20px;
-            font-size: 1.5rem;
+            color: #f05454;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>AFTER CHRIST</h1>
-        <p>(AC) - A High Pro Gorilla Tag Competitive Team</p>
+        <h1>Eclipse</h1>
+        <p>A Premier Gorilla Tag Competitive Team</p>
         <nav>
             <a href="#about">About</a>
             <a href="#team">Team Members</a>
@@ -189,31 +133,32 @@
     </header>
 
     <section id="about">
-        <p>Welcome to the official page of AFTER CHRIST (AC), a high-profile competitive team. We strive for excellence and have a passion for pushing the boundaries of competitive Gorilla Tag. Join us as we aim for the top!</p>
+        <img src="background-image-placeholder.png" alt="Eclipse Team Image" class="team-image">
+        <p class="team-description">Welcome to the official page of Eclipse, a high-performance competitive team dedicated to excellence and innovation in the Gorilla Tag arena. Join us as we aim for greatness and set new standards in gameplay!</p>
     </section>
 
     <section id="team">
         <h2>Meet the Team</h2>
         <div class="team-members">
             <div class="member">
-                <h3>CAPTAIN</h3>
-                <p>A person in charge of the team, managing, promoting, and helping new people.</p>
+                <h3>Member 1</h3>
+                <p>Role: Captain</p>
+                <p>Known for strategic vision and leadership.</p>
             </div>
             <div class="member">
-                <h3>TEAM PLAYER</h3>
-                <p>A player that participates in scrims and team practices.</p>
+                <h3>Member 2</h3>
+                <p>Role: Sniper</p>
+                <p>Exceptional precision and reflexes in every move.</p>
             </div>
             <div class="member">
-                <h3>OFFICIAL PLAYER</h3>
-                <p>Plays in official scrims and in events like GTC, CGT, etc.</p>
+                <h3>Member 3</h3>
+                <p>Role: Support</p>
+                <p>Always ready to assist and amplify the team's success.</p>
             </div>
             <div class="member">
-                <h3>SCOUT</h3>
-                <p>A player that helps look for new official players and team players.</p>
-            </div>
-            <div class="member">
-                <h3>CO-CAPTAIN</h3>
-                <p>Helps manage the team and assists the captain.</p>
+                <h3>Member 4</h3>
+                <p>Role: Scout</p>
+                <p>Quick and agile, with an eye for detail.</p>
             </div>
         </div>
     </section>
@@ -230,13 +175,8 @@
     <section id="contact">
         <h2>Contact Us</h2>
         <form id="contactForm" onsubmit="sendMessage(event)">
-            <input type="text" id="name" placeholder="Your Discord Username" required>
-            <select id="role" required>
-                <option value="" disabled selected>Select Your Role</option>
-                <option value="Team Player">Team Player</option>
-                <option value="Official Player">Official Player</option>
-                <option value="Scout">Scout</option>
-            </select>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
             <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
@@ -248,94 +188,22 @@
         </div>
     </section>
 
-    <section class="account-section">
-        <h2>Create an Account or Login</h2>
-        <input type="text" id="username" placeholder="Username" required>
-        <input type="password" id="password" placeholder="Password" required>
-        <button onclick="signup()">Sign Up</button>
-        <button onclick="login()">Login</button>
-
-        <div class="hidden-options" id="hiddenOptions">
-            <div class="welcome-message" id="welcomeMessage"></div>
-            <div class="logged-in-options" id="loggedInOptions">
-                <h3>Welcome, <span id="displayUsername"></span>!</h3>
-                <button onclick="showMoreOptions()">More Options</button>
-                <div id="moreOptions" style="display:none;">
-                    <p>Here are some extra features available to you:</p>
-                    <button>Feature 1</button>
-                    <button>Feature 2</button>
-                    <button>Feature 3</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <footer>
-        <p>&copy; 2024 AFTER CHRIST. All Rights Reserved.</p>
+        <p>&copy; 2024 Eclipse Competitive Team. All Rights Reserved.</p>
     </footer>
 
     <script>
-        const storedUsers = JSON.parse(localStorage.getItem('users')) || [];
-        let isLoggedIn = false;
-
-        function signup() {
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-
-            // Check if the username already exists
-            if (storedUsers.some(user => user.username === username)) {
-                alert('Username already exists. Please choose another one.');
-                return;
-            }
-
-            // Create a new user and store it
-            storedUsers.push({ username, password });
-            localStorage.setItem('users', JSON.stringify(storedUsers));
-
-            // Clear input fields
-            document.getElementById('username').value = '';
-            document.getElementById('password').value = '';
-
-            // Show hidden options
-            document.getElementById('hiddenOptions').style.display = 'block';
-            document.getElementById('welcomeMessage').innerText = `Account created for ${username}!`;
-        }
-
-        function login() {
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-
-            // Check if the user exists and the password matches
-            const user = storedUsers.find(user => user.username === username && user.password === password);
-
-            if (user) {
-                isLoggedIn = true;
-                document.getElementById('hiddenOptions').style.display = 'block';
-                document.getElementById('displayUsername').innerText = username;
-                document.getElementById('loggedInOptions').classList.add('active');
-                document.getElementById('welcomeMessage').innerText = `Welcome back, ${username}!`;
-                // Clear input fields
-                document.getElementById('username').value = '';
-                document.getElementById('password').value = '';
-            } else {
-                alert('Invalid username or password.');
-            }
-        }
-
-        function showMoreOptions() {
-            const moreOptions = document.getElementById('moreOptions');
-            moreOptions.style.display = moreOptions.style.display === 'none' ? 'block' : 'none';
-        }
-
         function sendMessage(event) {
             event.preventDefault();
+
             const name = document.getElementById('name').value;
-            const role = document.getElementById('role').value;
+            const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
 
             const webhookURL = 'https://discord.com/api/webhooks/1297315112167931937/t7-Lwto-L2ONP_dwdHZ-yyVyrE9_-0PB5RJkT4xOyc9itlgWUYNAhNLbl23MrgXfpYia';
+
             const payload = {
-                content: `Message from ${name} (${role}): ${message}`
+                content: `New message from ${name} (${email}): ${message}`
             };
 
             fetch(webhookURL, {
@@ -347,15 +215,15 @@
             })
             .then(response => {
                 if (response.ok) {
-                    alert('Message sent to Discord!');
+                    alert('Message sent successfully!');
                     document.getElementById('contactForm').reset();
                 } else {
-                    alert('Failed to send message.');
+                    alert('Error sending message. Please try again later.');
                 }
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert('Error sending message.');
+                alert('Error sending message. Please try again later.');
             });
         }
     </script>
