@@ -143,6 +143,23 @@
         .more-button:hover, .scrim-schedule-button:hover {
             background-color: #ff7675;
         }
+
+        .achievement-toggle {
+            cursor: pointer;
+            color: #f05454;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .achievement-content {
+            display: none;
+            margin-top: 10px;
+            color: #e0e0e0;
+        }
+
+        .achievement:hover .achievement-content {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -210,7 +227,22 @@
         <h2>Our Achievements</h2>
         <div class="achievements">
             <div class="achievement">
-                <h3><strong>Coming Soon</strong></h3>
+                <p class="achievement-toggle">Player 1 - Team 1 - League 1</p>
+                <div class="achievement-content">
+                    <p><strong>Coming Soon</strong></p>
+                </div>
+            </div>
+            <div class="achievement">
+                <p class="achievement-toggle">Player 2 - Team 2 - League 2</p>
+                <div class="achievement-content">
+                    <p><strong>Coming Soon</strong></p>
+                </div>
+            </div>
+            <div class="achievement">
+                <p class="achievement-toggle">Player 3 - Team 3 - League 3</p>
+                <div class="achievement-content">
+                    <p><strong>Coming Soon</strong></p>
+                </div>
             </div>
         </div>
     </section>
@@ -232,22 +264,12 @@
 
     <footer>
         <p>&copy; 2024 Eclipse Competitive Team. All Rights Reserved.</p>
-        <button class="scrim-schedule-button" onclick="toggleScrimSchedule()">Scrim Schedules</button>
-        <div class="scrim-schedule-section" id="scrimScheduleContent">
-            <h2>Upcoming Scrim Schedule</h2>
-            <p><strong>Saint vs. Eclipse</strong><br>November 8, 2024 - 7 PM EST</p>
-        </div>
     </footer>
 
     <script>
         function toggleMore() {
-            const moreSection = document.getElementById("moreContent");
-            moreSection.style.display = moreSection.style.display === "none" || moreSection.style.display === "" ? "block" : "none";
-        }
-
-        function toggleScrimSchedule() {
-            const scrimScheduleSection = document.getElementById("scrimScheduleContent");
-            scrimScheduleSection.style.display = scrimScheduleSection.style.display === "none" || scrimScheduleSection.style.display === "" ? "block" : "none";
+            const moreSection = document.getElementById('moreContent');
+            moreSection.style.display = (moreSection.style.display === 'none' || moreSection.style.display === '') ? 'block' : 'none';
         }
 
         function sendMessage(event) {
