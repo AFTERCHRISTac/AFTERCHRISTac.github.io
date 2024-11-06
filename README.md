@@ -143,66 +143,6 @@
         .more-button:hover, .scrim-schedule-button:hover {
             background-color: #ff7675;
         }
-
-        .achievement-toggle {
-            cursor: pointer;
-            color: #f05454;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .achievement-content {
-            display: none;
-            margin-top: 10px;
-            color: #e0e0e0;
-        }
-
-        .achievement:hover .achievement-content {
-            display: block;
-        }
-
-        .achievement-section {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-
-        .achievement-category {
-            width: 30%;
-            background: rgba(50, 50, 50, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            margin: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .achievement-category h3 {
-            text-align: center;
-            font-size: 1.5rem;
-            color: #f05454;
-        }
-
-        .achievement-item {
-            cursor: pointer;
-            margin: 10px 0;
-            text-align: center;
-            color: #f05454;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .achievement-item:hover {
-            color: #ff7675;
-        }
-
-        .achievement-item p {
-            display: none;
-            color: #e0e0e0;
-        }
-
-        .achievement-item.active p {
-            display: block;
-        }
     </style>
 </head>
 <body>
@@ -268,42 +208,9 @@
 
     <section id="achievements">
         <h2>Our Achievements</h2>
-        <div class="achievement-section">
-            <!-- Player Achievement -->
-            <div class="achievement-category">
-                <h3>Player</h3>
-                <div class="achievement-item" onclick="toggleAchievementContent(this)">
-                    <p>Player 1</p>
-                    <p class="achievement-content">Coming Soon</p>
-                </div>
-                <div class="achievement-item" onclick="toggleAchievementContent(this)">
-                    <p>Player 2</p>
-                    <p class="achievement-content">Coming Soon</p>
-                </div>
-            </div>
-            <!-- Team Achievement -->
-            <div class="achievement-category">
-                <h3>Team</h3>
-                <div class="achievement-item" onclick="toggleAchievementContent(this)">
-                    <p>Team Achievement 1</p>
-                    <p class="achievement-content">Coming Soon</p>
-                </div>
-                <div class="achievement-item" onclick="toggleAchievementContent(this)">
-                    <p>Team Achievement 2</p>
-                    <p class="achievement-content">Coming Soon</p>
-                </div>
-            </div>
-            <!-- League Achievement -->
-            <div class="achievement-category">
-                <h3>League</h3>
-                <div class="achievement-item" onclick="toggleAchievementContent(this)">
-                    <p>League Achievement 1</p>
-                    <p class="achievement-content">Coming Soon</p>
-                </div>
-                <div class="achievement-item" onclick="toggleAchievementContent(this)">
-                    <p>League Achievement 2</p>
-                    <p class="achievement-content">Coming Soon</p>
-                </div>
+        <div class="achievements">
+            <div class="achievement">
+                <h3><strong>Coming Soon</strong></h3>
             </div>
         </div>
     </section>
@@ -312,23 +219,35 @@
         <h2>Contact Us</h2>
         <form id="contactForm" onsubmit="sendMessage(event)">
             <input type="text" id="name" placeholder="Your Name" required>
-            <textarea id="message" placeholder="Your Message" required></textarea>
+            <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
+        <div class="social-media">
+            <h3>Follow Us</h3>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Eclipse - All Rights Reserved.</p>
+        <p>&copy; 2024 Eclipse Competitive Team. All Rights Reserved.</p>
+        <button class="scrim-schedule-button" onclick="toggleScrimSchedule()">Scrim Schedules</button>
+        <div class="scrim-schedule-section" id="scrimScheduleContent">
+            <h2>Upcoming Scrim Schedule</h2>
+            <p><strong>Saint vs. Eclipse</strong><br>November 8, 2024 - 7 PM EST</p>
+        </div>
     </footer>
 
     <script>
         function toggleMore() {
-            const moreSection = document.getElementById('moreContent');
-            moreSection.style.display = (moreSection.style.display === 'none' || moreSection.style.display === '') ? 'block' : 'none';
+            const moreSection = document.getElementById("moreContent");
+            moreSection.style.display = moreSection.style.display === "none" || moreSection.style.display === "" ? "block" : "none";
         }
 
-        function toggleAchievementContent(element) {
-            element.classList.toggle('active');
+        function toggleScrimSchedule() {
+            const scrimScheduleSection = document.getElementById("scrimScheduleContent");
+            scrimScheduleSection.style.display = scrimScheduleSection.style.display === "none" || scrimScheduleSection.style.display === "" ? "block" : "none";
         }
 
         function sendMessage(event) {
