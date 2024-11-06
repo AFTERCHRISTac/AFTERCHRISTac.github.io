@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,155 +17,95 @@
             padding: 0;
         }
 
-        header {
+        header, footer {
             background: #111;
             color: #ffffff;
-            padding: 20px;
             text-align: center;
+            padding: 20px;
             border-bottom: 2px solid #444;
         }
 
         header h1 {
             font-size: 3.5rem;
-            text-transform: uppercase;
-            margin: 0;
             color: #f05454;
-            letter-spacing: 3px;
         }
 
-        section {
-            padding: 40px;
-            text-align: center;
+        section, .expandable-section {
+            padding: 20px;
             background: rgba(25, 25, 25, 0.9);
             margin: 20px;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0,0,0,0.7);
+            display: none;
         }
 
-        .more-button {
+        .button-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .expand-button {
             padding: 10px 20px;
             background-color: #f05454;
             color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 1.1rem;
-            margin-top: 10px;
+            margin: 10px;
         }
 
-        .more-button:hover {
+        .expand-button:hover {
             background-color: #ff7675;
-        }
-
-        .more-section {
-            display: none;
-            margin-top: 20px;
-            color: #f3f3f3;
-            background: rgba(34, 34, 34, 0.9);
-            padding: 20px;
-            border-radius: 10px;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Eclipse</h1>
-        <p>Unleashing Ultimate Talent in Gorilla Tag Competitions</p>
+        <p>A Premier Gorilla Tag Competitive Team</p>
     </header>
 
-    <!-- About Section -->
     <section id="about">
-        <h2>About Eclipse</h2>
-        <p>We’re dedicated to mastering Gorilla Tag, bringing you exhilarating gameplay and unmatched skill.</p>
-        <button class="more-button" onclick="toggleSection('aboutHistory')">Our History</button>
-        <div id="aboutHistory" class="more-section">
-            <p>Formed by passionate players, Eclipse has quickly risen through the ranks, becoming a feared competitor.</p>
-        </div>
-        <button class="more-button" onclick="toggleSection('philosophy')">Our Philosophy</button>
-        <div id="philosophy" class="more-section">
-            <p>Driven by a commitment to excellence and teamwork, we believe in playing fairly and mastering our skills to lead the field.</p>
-        </div>
+        <p>Welcome to Eclipse, a high-performance team in Gorilla Tag.</p>
     </section>
 
-    <!-- Achievements Section -->
-    <section id="achievements">
-        <h2>Our Achievements</h2>
-        <button class="more-button" onclick="toggleSection('comingSoon')">Show More Achievements</button>
-        <div id="comingSoon" class="more-section">
-            <p><strong>Coming Soon:</strong> Stay tuned for our upcoming awards and accomplishments as we continue to dominate the arena.</p>
-        </div>
+    <!-- Button Container for expandable sections -->
+    <div class="button-container">
+        <button class="expand-button" onclick="toggleSection('mission')">Our Mission</button>
+        <button class="expand-button" onclick="toggleSection('schedule')">Training Schedule</button>
+        <button class="expand-button" onclick="toggleSection('tournaments')">Upcoming Tournaments</button>
+        <button class="expand-button" onclick="toggleSection('coaches')">Contact Coaches</button>
+    </div>
+
+    <!-- Expandable Sections -->
+    <section id="mission" class="expandable-section">
+        <h2>Our Mission</h2>
+        <p>To push the limits of competitive play, representing Eclipse with excellence.</p>
     </section>
 
-    <!-- Meet the Team Section -->
-    <section id="team">
-        <h2>Meet the Team</h2>
-        <p>Our team is composed of skilled individuals, each bringing unique strengths to every match.</p>
-        <button class="more-button" onclick="toggleSection('roster')">Roster</button>
-        <div id="roster" class="more-section">
-            <h3>Roster</h3>
-            <ul>
-                <li>@errorxm</li>
-                <li>@𝓩𝓮𝓽𝓪✞</li>
-                <li>@AC MNM</li>
-                <li>@Chikune</li>
-                <li>@no name</li>
-                <li>@vision brought pizza for you all</li>
-                <li>@Beats</li>
-                <li>@D1V8IN</li>
-                <li>@Ⓑ</li>
-                <li>@✦CARTIFE!NV4MP✦</li>
-            </ul>
-        </div>
-        <button class="more-button" onclick="toggleSection('roles')">Our Key Roles</button>
-        <div id="roles" class="more-section">
-            <div><strong>Team Manager:</strong> Coordinates events and ensures smooth operations.</div>
-            <div><strong>Scrim Manager:</strong> Manages scrimmages and practice sessions.</div>
-            <div><strong>Referee:</strong> Ensures adherence to fair play.</div>
-            <div><strong>Caster:</strong> Provides live commentary during matches.</div>
-        </div>
+    <section id="schedule" class="expandable-section">
+        <h2>Training Schedule</h2>
+        <p>Our team trains every Wednesday and Friday at 6 PM EST.</p>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form id="contactForm" onsubmit="sendMessage(event)">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+    <section id="tournaments" class="expandable-section">
+        <h2>Upcoming Tournaments</h2>
+        <p>Catch us in the next Ultimate COMP Gorilla Tag Tournament on November 15th!</p>
     </section>
+
+    <section id="coaches" class="expandable-section">
+        <h2>Contact Coaches</h2>
+        <p>Reach out to our coaches via email at coaches@eclipse.com or on Discord.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Eclipse Competitive Team. All Rights Reserved.</p>
+    </footer>
 
     <script>
-        function toggleSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            section.style.display = section.style.display === 'block' ? 'none' : 'block';
-        }
-
-        function sendMessage(event) {
-            event.preventDefault();
-            const name = document.getElementById('name').value;
-            const message = document.getElementById('message').value;
-            const webhookURL = 'https://discord.com/api/webhooks/1303555595907108884/QZSxuSDug616xvyF2dTHziooRjCSk7twoTFod5-6qKVqGUVQwlmNdbJ_kBzm3Cg-Nok1';
-
-            const payload = { content: `New message from ${name}: ${message}` };
-
-            fetch(webhookURL, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
-            })
-            .then(response => {
-                if (response.ok) {
-                    alert('Message sent successfully!');
-                    document.getElementById('contactForm').reset();
-                } else {
-                    alert('Error sending message. Please try again later.');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Error sending message. Please try again later.');
-            });
+        function toggleSection(id) {
+            const section = document.getElementById(id);
+            section.style.display = section.style.display === "none" || section.style.display === "" ? "block" : "none";
         }
     </script>
 </body>
