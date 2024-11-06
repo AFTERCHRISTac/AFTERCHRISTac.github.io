@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -118,6 +118,29 @@
             text-decoration: none;
             color: #f05454;
         }
+
+        .more-section {
+            display: none;
+            margin-top: 20px;
+            color: #f3f3f3;
+            background: rgba(34, 34, 34, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .more-button {
+            padding: 10px 20px;
+            background-color: #f05454;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        .more-button:hover {
+            background-color: #ff7675;
+        }
     </style>
 </head>
 <body>
@@ -145,21 +168,25 @@
                 <p>Role: Captain</p>
                 <p>Known for strategic vision and leadership.</p>
             </div>
-            <div class="member">
-                <h3>Member 2</h3>
-                <p>Role: Sniper</p>
-                <p>Exceptional precision and reflexes in every move.</p>
-            </div>
-            <div class="member">
-                <h3>Member 3</h3>
-                <p>Role: Support</p>
-                <p>Always ready to assist and amplify the team's success.</p>
-            </div>
-            <div class="member">
-                <h3>Member 4</h3>
-                <p>Role: Scout</p>
-                <p>Quick and agile, with an eye for detail.</p>
-            </div>
+            <!-- Add more members as needed -->
+        </div>
+        <button class="more-button" onclick="toggleMore()">More</button>
+        <div class="more-section" id="moreContent">
+            <h2>Leagues & Roster</h2>
+            <p><strong>League:</strong> Ultimate COMP Gorilla Tag</p>
+            <h3>Roster</h3>
+            <ul>
+                <li>@errorxm</li>
+                <li>@𝓩𝓮𝓽𝓪✞</li>
+                <li>@AC MNM</li>
+                <li>@Chikune</li>
+                <li>@no name</li>
+                <li>@vision brought pizza for you all</li>
+                <li>@Beats</li>
+                <li>@D1V8IN</li>
+                <li>@Ⓑ</li>
+                <li>@✦CARTIFE!NV4MP✦</li>
+            </ul>
         </div>
     </section>
 
@@ -176,7 +203,6 @@
         <h2>Contact Us</h2>
         <form id="contactForm" onsubmit="sendMessage(event)">
             <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
             <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
@@ -193,17 +219,21 @@
     </footer>
 
     <script>
+        function toggleMore() {
+            const moreSection = document.getElementById("moreContent");
+            moreSection.style.display = moreSection.style.display === "none" || moreSection.style.display === "" ? "block" : "none";
+        }
+
         function sendMessage(event) {
             event.preventDefault();
 
             const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
 
-            const webhookURL = 'https://discord.com/api/webhooks/1297315112167931937/t7-Lwto-L2ONP_dwdHZ-yyVyrE9_-0PB5RJkT4xOyc9itlgWUYNAhNLbl23MrgXfpYia';
+            const webhookURL = 'https://discord.com/api/webhooks/1303555595907108884/QZSxuSDug616xvyF2dTHziooRjCSk7twoTFod5-6qKVqGUVQwlmNdbJ_kBzm3Cg-Nok1';
 
             const payload = {
-                content: `New message from ${name} (${email}): ${message}`
+                content: `New message from ${name}: ${message}`
             };
 
             fetch(webhookURL, {
